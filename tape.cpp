@@ -29,6 +29,7 @@ uint32_t Tape::read()
 
 void Tape::write(uint32_t val)
 {
+    // If the value is not 0 or 1 why are you attempting to right it to a turing machine tape?
     if (val < 0 || val > 1)
         return;
 
