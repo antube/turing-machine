@@ -3,10 +3,21 @@
 
 #include "tape.h"
 
+
+
 Tape::Tape()
 {
     // make sure the vector has at least a single value in it
     tape.push_back(0);
+}
+
+
+
+Tape::Tape(std::vector<uint32_t> values, unsigned long long startPosition)
+{
+    tape = values;
+    tapePosition = startPosition / 32;
+    bitPosition = startPosition % 32;
 }
 
 
@@ -21,7 +32,7 @@ Tape::~Tape()
 uint32_t Tape::read()
 {
     //   use the bit mask to mask the bit I want to return and then shift to the right
-    // until it is either a one or a zero (and not by shifting a value of one off the integer)
+    // until it is either a one or a zero (and not by; shifting a value of one off the integer)
     return (tape[tapePosition] & bitMask) >> bitPosition;
 }
 

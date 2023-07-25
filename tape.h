@@ -4,12 +4,15 @@
 #include <cstdint>
 
 
+
 enum move
 {
     left,
     right,
     nothing
 };
+
+
 
 class Tape
 {
@@ -24,6 +27,7 @@ private:
 
 public:
     Tape();
+    Tape(std::vector<uint32_t>, unsigned long long);
     ~Tape();
 
     uint32_t read();      // read current value from tape

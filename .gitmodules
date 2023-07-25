@@ -1,0 +1,3 @@
+[submodule "turing-interpreter"]
+	path = turing-interpreter
+	url = https://github.com/antube/turing-interpreter.git
